@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أجير حلول الموارد البشرية</title>
+   
+<head>
+
+    <style>
+        @font-face {
+  font-family: 'FrutigerArabic';
+  src: 
+       url('FrutigerLTArabic55Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+        body {
+              margin: 0;
+            padding: 0;
+           font-family: 'FrutigerArabic', sans-serif;
+               background-color: #edf2fb;
+            color: #333;
+            direction: ltr;
+        }   /* Header */
+        .header {
+            background-color: #ffffff;
+            padding: 15px 30px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .nav-button {
+              font-family: 'FrutigerArabic', sans-serif;
+            background-color: #152e83;
+            color: white;
+            border: none;
+            padding: 5px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .nav-link {
+             
+            color: #697687;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .logo {
+            font-weight: bold;
+            color: #152e83;
+            font-size: 18px;
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: 1200px;
+            margin: 10px auto;
+            padding: 0 20px;
+         
+        }
+
+        .page-title {
+            text-align: right;
+            font-size: 24px;
+            font-weight: bolder;
+            color: rgb(53, 62, 95);
+            margin-bottom: 24px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-height: 300px;
+           direction: rtl;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: rgb(66, 74, 105);
+            margin-bottom: 10px;
+            text-align: right;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .card-content {
+            line-height: 1.8;
+        }
+
+        .field-label {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .field-value {
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+
+        /* Copy Link Button */
+        .copy-link-btn {
+            background-color: #152e83;
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+           font-family: 'FrutigerArabic', sans-serif;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .copy-link-btn:hover {
+            background-color: #2a3a7a;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e0e0e0;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            height: 40px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .help-button {
+            background-color: #152e83;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: fixed;
+            font-weight: bolder;
+  bottom: 60px;
+  left: 20px;
+  z-index: 9999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .footer {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-buttons">
+            <button class="nav-button">سجل الآن</button>
+            <a href="#" class="nav-link">تسجيل الدخول</a>
+            <a href="#" class="nav-link">مركز المعرفة</a>
+            <div class="language-selector">
+                <span>English</span>
+                <span style="color:#697687;width: 20px;">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6589 2.34108C12.1516 0.833709 10.1389 0 8 0C5.86105 0 3.85684 0.833709 2.34105 2.34108C0.833684 3.84845 0 5.86105 0 8C0 10.1389 0.833684 12.1431 2.34105 13.6589C3.84842 15.1663 5.86105 16 8 16C10.1389 16 12.1432 15.1663 13.6589 13.6589C15.1663 12.1516 16 10.1389 16 8C16 5.86105 15.1663 3.85687 13.6589 2.34108ZM12.6232 7.57895C12.5979 6.67789 12.4884 5.80214 12.2947 4.9853C12.5979 5.11162 12.8842 5.24634 13.1537 5.38949C14.2568 6.00423 14.9389 6.77053 15.1074 7.57895H12.6232ZM11.7811 7.57895H8.42105V4.21896C9.45684 4.25264 10.4421 4.40424 11.3432 4.65687C11.6042 5.5495 11.7558 6.54316 11.7811 7.57895ZM8.42105 3.37685V0.892681C9.22947 1.06952 9.99579 1.75158 10.6105 2.84632C10.7621 3.11579 10.8968 3.40213 11.0147 3.70528C10.1979 3.5116 9.32211 3.40211 8.42105 3.37685ZM7.57895 0.884252V3.36842C6.67789 3.39368 5.80211 3.50317 4.98526 3.69685C5.11158 3.3937 5.24632 3.10736 5.38947 2.83789C6.00421 1.74315 6.77053 1.06109 7.57895 0.884252ZM7.57895 4.21896V7.57895H4.21895C4.25263 6.54316 4.40421 5.5495 4.65684 4.65687C5.5579 4.39581 6.54316 4.25264 7.57895 4.21896ZM3.37684 7.57895H0.892632C1.06947 6.77053 1.74316 6.00423 2.84632 5.38949C3.11579 5.23792 3.40211 5.10319 3.70526 4.9853C3.51158 5.80214 3.40211 6.67789 3.37684 7.57895ZM3.37684 8.42105C3.40211 9.32211 3.51158 10.1979 3.70526 11.0147C3.40211 10.8884 3.11579 10.7537 2.84632 10.6105C1.74316 9.99577 1.06105 9.22947 0.892632 8.42105H3.37684ZM4.21895 8.42105H7.57895V11.781C6.54316 11.7474 5.5579 11.5958 4.65684 11.3431C4.40421 10.4505 4.25263 9.45684 4.21895 8.42105ZM7.57895 12.6231V15.1073C6.77053 14.9305 6.00421 14.2484 5.38947 13.1537C5.2379 12.8842 5.10316 12.5979 4.98526 12.2947C5.80211 12.4884 6.67789 12.5979 7.57895 12.6231ZM8.42105 15.1157V12.6316C9.32211 12.6063 10.1979 12.4968 11.0147 12.3031C10.8884 12.6063 10.7537 12.8926 10.6105 13.1621C9.99579 14.2568 9.22947 14.9389 8.42105 15.1157ZM8.42105 11.781V8.42105H11.7811C11.7474 9.45684 11.5958 10.4505 11.3432 11.3431C10.4505 11.6042 9.45684 11.7474 8.42105 11.781ZM12.6232 8.42105H15.1074C14.9305 9.22947 14.2568 9.99577 13.1537 10.6105C12.8842 10.7621 12.5979 10.8968 12.2947 11.0147C12.4884 10.1979 12.5979 9.32211 12.6232 8.42105ZM14.6779 5.43154C14.3579 5.15364 13.9874 4.89266 13.5579 4.65687C13.0863 4.39581 12.5642 4.1684 12.0084 3.98314C11.8232 3.42735 11.5958 2.90528 11.3347 2.4337C11.0989 2.01264 10.8379 1.63364 10.56 1.32206C12.4547 2.04627 13.9537 3.54522 14.6779 5.43154ZM5.43158 1.32206C5.15368 1.64206 4.89263 2.01264 4.65684 2.4337C4.39579 2.90528 4.16842 3.42735 3.98316 3.98314C3.42737 4.1684 2.90526 4.39581 2.43368 4.65687C2.01263 4.89266 1.63368 5.15364 1.31368 5.43154C2.04632 3.54522 3.54526 2.04627 5.43158 1.32206ZM1.32211 10.5685C1.64211 10.8464 2.01263 11.1073 2.44211 11.3431C2.91368 11.6042 3.43579 11.8316 3.99158 12.0169C4.17684 12.5726 4.40421 13.0947 4.66526 13.5663C4.90105 13.9874 5.16211 14.3664 5.44 14.6779C3.54526 13.9537 2.04632 12.4548 1.32211 10.5685ZM10.5768 14.6779C10.8547 14.3579 11.1158 13.9874 11.3516 13.5663C11.6126 13.0947 11.84 12.5726 12.0253 12.0169C12.5811 11.8316 13.1032 11.6042 13.5747 11.3431C13.9958 11.1073 14.3747 10.8464 14.6947 10.5685C13.9537 12.4548 12.4547 13.9537 10.5768 14.6779Z" fill="currentColor"></path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div class="logo"><img src="logo.png" width="50px"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <h1 class="page-title">تصريح أجير لحلول الموارد البشرية</h1>
+       
+      <div class="content-grid">
+  <div class="card">
+    <h2 class="card-title">معلومات التصريح</h2>
+    <div class="card-content">
+      <div class="field-label">اسم الموظف:</div>
+      <div class="field-value">Alim Miah</div>
+      <div class="field-label">حالة التصريح:</div>
+      <div class="field-value" style="background-color: #edf2fa; width: 42px; height: 31px; border-radius: 5px; padding: 4px 6px 0px 0px;">فعال</div>
+      <div class="field-label">تاريخ بداية التصريح:</div>
+      <div class="field-value">2026-07-04</div>
+      <div class="field-label">تاريخ نهاية التصريح:</div>
+      <div class="field-value">2027-07-04</div>
+    </div>
+  </div>
+  <div class="card">
+    <h2 class="card-title">المنشأة المستفيدة</h2>
+    <div class="card-content">
+      <div class="field-label">اسم المنشأة:</div>
+      <div class="field-value">شركة عاصمة البنيان الحديث</div>
+      <div class="field-label">رقم المنشأة:</div>
+      <div class="field-value">1-2345678</div>
+    </div>
+  </div>
+  <div class="card">
+    <h2 class="card-title">شركة الإستقدام</h2>
+    <div class="card-content">
+      <div class="field-label">اسم المنشأة:</div>
+      <div class="field-value">شركة موسى جابر الشهري</div>
+      <div class="field-label">رقم المنشأة:</div>
+      <div class="field-value">4-9876543</div>
+    </div>
+  </div>
+</div>  
+
+        <!-- Copy Link Button -->
+        <button class="copy-link-btn">
+          
+            <div style="text-align: center;
+  width: 100%;">   <span style="padding-right: 6px;">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="icon" color="#ffffff"><path d="M11.3808 12.9453C10.2756 12.9453 9.15863 12.5221 8.32383 11.6756C8.08867 11.4404 8.08867 11.0758 8.32383 10.8407C8.55898 10.6173 8.92347 10.6173 9.15863 10.8407C10.3932 12.0752 12.392 12.0752 13.6148 10.8407L17.8946 6.56083C19.1292 5.32626 19.1292 3.32754 17.8946 2.10474C16.6601 0.881929 14.6613 0.870171 13.4385 2.10474L9.82882 5.7143C9.59366 5.9377 9.22917 5.9377 8.99402 5.7143C8.75886 5.47915 8.75886 5.1147 8.99402 4.87955L12.6036 1.26984C14.2968 -0.423279 17.0363 -0.423279 18.7294 1.26984C20.4108 2.96295 20.4226 5.70261 18.7294 7.39572L14.4496 11.6756C13.6031 12.5221 12.4861 12.9453 11.3808 12.9453Z" fill="currentColor"></path><path d="M4.32685 20C3.22162 20 2.10464 19.5768 1.26984 18.7303C-0.423279 17.0371 -0.423279 14.2975 1.26984 12.6044L5.54966 8.32452C7.24277 6.63141 9.98233 6.63141 11.6754 8.32452C11.9106 8.55968 11.9106 8.92427 11.6754 9.15942C11.4521 9.39458 11.0758 9.39458 10.8406 9.15942C9.60608 7.92486 7.60727 7.92486 6.38446 9.15942L2.10464 13.4393C0.870074 14.6738 0.870074 16.6725 2.10464 17.8954C3.3392 19.1299 5.33802 19.1299 6.56083 17.8954L10.1705 14.2858C10.3939 14.0506 10.7701 14.0506 11.0053 14.2858C11.2287 14.5092 11.2287 14.8854 11.0053 15.1205L7.39563 18.7303C6.54907 19.5768 5.43208 20 4.32685 20Z" fill="currentColor"></path></svg></span>نسخ رابط الصفحة </div>
+        </button>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      
+            <span class="footer-link" ><img src="logo.png" width="45px"></span>
+               <a href="#" class="footer-link">سياسات الخصوصية</a>
+                 <a href="#" class="footer-link">الشروط والأحكام</a>
+         
+        <div class="footer-links">
+            
+            <a href="#" class="footer-link">English       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6589 2.34108C12.1516 0.833709 10.1389 0 8 0C5.86105 0 3.85684 0.833709 2.34105 2.34108C0.833684 3.84845 0 5.86105 0 8C0 10.1389 0.833684 12.1431 2.34105 13.6589C3.84842 15.1663 5.86105 16 8 16C10.1389 16 12.1432 15.1663 13.6589 13.6589C15.1663 12.1516 16 10.1389 16 8C16 5.86105 15.1663 3.85687 13.6589 2.34108ZM12.6232 7.57895C12.5979 6.67789 12.4884 5.80214 12.2947 4.9853C12.5979 5.11162 12.8842 5.24634 13.1537 5.38949C14.2568 6.00423 14.9389 6.77053 15.1074 7.57895H12.6232ZM11.7811 7.57895H8.42105V4.21896C9.45684 4.25264 10.4421 4.40424 11.3432 4.65687C11.6042 5.5495 11.7558 6.54316 11.7811 7.57895ZM8.42105 3.37685V0.892681C9.22947 1.06952 9.99579 1.75158 10.6105 2.84632C10.7621 3.11579 10.8968 3.40213 11.0147 3.70528C10.1979 3.5116 9.32211 3.40211 8.42105 3.37685ZM7.57895 0.884252V3.36842C6.67789 3.39368 5.80211 3.50317 4.98526 3.69685C5.11158 3.3937 5.24632 3.10736 5.38947 2.83789C6.00421 1.74315 6.77053 1.06109 7.57895 0.884252ZM7.57895 4.21896V7.57895H4.21895C4.25263 6.54316 4.40421 5.5495 4.65684 4.65687C5.5579 4.39581 6.54316 4.25264 7.57895 4.21896ZM3.37684 7.57895H0.892632C1.06947 6.77053 1.74316 6.00423 2.84632 5.38949C3.11579 5.23792 3.40211 5.10319 3.70526 4.9853C3.51158 5.80214 3.40211 6.67789 3.37684 7.57895ZM3.37684 8.42105C3.40211 9.32211 3.51158 10.1979 3.70526 11.0147C3.40211 10.8884 3.11579 10.7537 2.84632 10.6105C1.74316 9.99577 1.06105 9.22947 0.892632 8.42105H3.37684ZM4.21895 8.42105H7.57895V11.781C6.54316 11.7474 5.5579 11.5958 4.65684 11.3431C4.40421 10.4505 4.25263 9.45684 4.21895 8.42105ZM7.57895 12.6231V15.1073C6.77053 14.9305 6.00421 14.2484 5.38947 13.1537C5.2379 12.8842 5.10316 12.5979 4.98526 12.2947C5.80211 12.4884 6.67789 12.5979 7.57895 12.6231ZM8.42105 15.1157V12.6316C9.32211 12.6063 10.1979 12.4968 11.0147 12.3031C10.8884 12.6063 10.7537 12.8926 10.6105 13.1621C9.99579 14.2568 9.22947 14.9389 8.42105 15.1157ZM8.42105 11.781V8.42105H11.7811C11.7474 9.45684 11.5958 10.4505 11.3432 11.3431C10.4505 11.6042 9.45684 11.7474 8.42105 11.781ZM12.6232 8.42105H15.1074C14.9305 9.22947 14.2568 9.99577 13.1537 10.6105C12.8842 10.7621 12.5979 10.8968 12.2947 11.0147C12.4884 10.1979 12.5979 9.32211 12.6232 8.42105ZM14.6779 5.43154C14.3579 5.15364 13.9874 4.89266 13.5579 4.65687C13.0863 4.39581 12.5642 4.1684 12.0084 3.98314C11.8232 3.42735 11.5958 2.90528 11.3347 2.4337C11.0989 2.01264 10.8379 1.63364 10.56 1.32206C12.4547 2.04627 13.9537 3.54522 14.6779 5.43154ZM5.43158 1.32206C5.15368 1.64206 4.89263 2.01264 4.65684 2.4337C4.39579 2.90528 4.16842 3.42735 3.98316 3.98314C3.42737 4.1684 2.90526 4.39581 2.43368 4.65687C2.01263 4.89266 1.63368 5.15364 1.31368 5.43154C2.04632 3.54522 3.54526 2.04627 5.43158 1.32206ZM1.32211 10.5685C1.64211 10.8464 2.01263 11.1073 2.44211 11.3431C2.91368 11.6042 3.43579 11.8316 3.99158 12.0169C4.17684 12.5726 4.40421 13.0947 4.66526 13.5663C4.90105 13.9874 5.16211 14.3664 5.44 14.6779C3.54526 13.9537 2.04632 12.4548 1.32211 10.5685ZM10.5768 14.6779C10.8547 14.3579 11.1158 13.9874 11.3516 13.5663C11.6126 13.0947 11.84 12.5726 12.0253 12.0169C12.5811 11.8316 13.1032 11.6042 13.5747 11.3431C13.9958 11.1073 14.3747 10.8464 14.6947 10.5685C13.9537 12.4548 12.4547 13.9537 10.5768 14.6779Z" fill="currentColor"></path>
+                    </svg></a>
+            <a href="#" class="footer-link">١٤٤٧ هـ / © أجير حلول الموارد البشرية</a>
+       
+        
+        </div>
+
+          <div class="footer-left">
+            <button class="help-button">
+               
+                مساعدة
+                 <span style="color: white;border: 1px solid;
+  border-radius: 71px;
+  padding: 2px;
+  margin: 1px;
+  width: 17px;">?</span>
+            </button>
+            <div class="footer-logo">
+                <span ><img src="hr.svg" width="100px"></span>
+            </div>
+              <div class="footer-logo">
+                <span ><img src="tk.svg" width="60px"></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Copy link functionality
+        document.querySelector('.copy-link-btn').addEventListener('click', function() {
+            navigator.clipboard.writeText(window.location.href).then(function() {
+                alert('تم نسخ الرابط بنجاح');
+            });
+        });
+    </script>
+</body>
+</html>
+
